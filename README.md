@@ -8,5 +8,3 @@ Criacionais:
 - Abstract Factory
 - Builder
 - Singleton
-
-Hello World
