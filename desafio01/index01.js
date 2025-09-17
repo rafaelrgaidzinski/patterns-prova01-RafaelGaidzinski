@@ -17,7 +17,7 @@ class Onibus {
     }
 }
 
-// Factory Method
+// Classe do Factory Method
 class TransportFactory {
     static types = {
         bicicleta: Bicicleta,
@@ -34,6 +34,7 @@ class TransportFactory {
     }
 }
 
+// Função principal que criar as factories
 function main() {
     const transports = ["bicicleta", "patinete", "onibus"];
     try {

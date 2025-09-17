@@ -1,3 +1,4 @@
+// Classe Singleton
 class Config {
     constructor() {
         if (Config.instance) {
@@ -23,13 +24,14 @@ class Config {
         console.log();
     }
 }
-  
+
+// Criação do primeiro componente da classe singleton 
 const c1 = new Config();
 c1.setConfig("firstLang", "pt-BR");
 console.log(c1.getConfig("firstLang"));
 c1.getAllConfig();
 
-
+// Criação do segundo componente da classe singleton
 const c2 = new Config();
 c2.setConfig("secondLang", "en-US");
 console.log(c2.getConfig("secondLang"));

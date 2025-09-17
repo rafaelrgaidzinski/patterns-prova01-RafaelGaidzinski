@@ -1,3 +1,4 @@
+// Classe concreta
 class Lanche {
     constructor() {
       this.pao = null;
@@ -19,6 +20,7 @@ class Lanche {
     }
 }
 
+// Classe Builder que monta os lanches
 class LancheBuilder {
     constructor() {
         this.lanche = new Lanche();
@@ -54,6 +56,7 @@ class LancheBuilder {
     }
 }
 
+// Classe Director que monta configurações pré definidas dos lanches
 class LancheDirector {
     static lancheSimples() {
         return new LancheBuilder()
@@ -75,12 +78,14 @@ class LancheDirector {
             .build()
     }
 }
-  
-  const lancheSimples = LancheDirector.lancheSimples();
-  const lancheCompleto = LancheDirector.lancheCompleto();
-  const lanchePersonalizado = new LancheBuilder().setPao("Pão Personalizado").setCarne("Carne Personalizada").setQueijo("Queijo Personalizado").build();
 
-  lancheSimples.show();
-  lancheCompleto.show();
-  lanchePersonalizado.show();
+
+// Utilizando a classe director que cria os lanches pré definidos
+const lancheSimples = LancheDirector.lancheSimples();
+const lancheCompleto = LancheDirector.lancheCompleto();
+const lanchePersonalizado = new LancheBuilder().setPao("Pão Personalizado").setCarne("Carne Personalizada").setQueijo("Queijo Personalizado").build();
+
+lancheSimples.show();
+lancheCompleto.show();
+lanchePersonalizado.show();
   
